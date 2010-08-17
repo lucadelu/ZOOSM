@@ -1,0 +1,72 @@
+[ZoOSM]
+ Title = Import vector data on OpenStreetMap. 
+ Abstract = Automathic import of vector data on OpenStreetMap database.
+ processVersion = 1
+ storeSupported = true
+ statusSupported = true
+ serviceType = Python
+ serviceProvider = zoosm
+ <MetaData lang="en">
+   title = ZoOSM
+ </MetaData>
+ <MetaData lang="it">
+   title = ZoOSM
+ </MetaData>
+ <DataInputs>
+  [inputvector]
+   Title = The input data source name
+   Abstract = The input data source name.
+   minOccurs = 1
+   maxOccurs = 1
+   <LiteralData>
+    DataType = string
+    <Default>
+     uom = feet
+    </Default>	
+    <Supported>
+     value = AAIGrid
+    </Supported>
+   </LiteralData>
+  [username]
+   Title = The OpenStreetMap's username
+   Abstract = The username of OpenStreetMap project.
+   minOccurs = 1
+   maxOccurs = 1
+   <LiteralData>
+    DataType = string
+    <Default>
+     uom = meter
+    </Default>	
+    <Supported>
+     uom = meter
+    </Supported>
+   </LiteralData>
+  [password]
+   Title = The OpenStreetMap's password
+   Abstract = The password of OpenStreetMap project.
+   minOccurs = 1
+   maxOccurs = 1
+   <LiteralData>
+    DataType = string
+    <Default>
+     uom = meter
+    </Default>	
+    <Supported>
+     uom = meter
+    </Supported>
+   </LiteralData>
+ </DataInputs>
+ <DataOutputs>
+  [output]
+   Title = A string of correct import
+   Abstract = When import terminate a success string is returned
+   <LiteralData>
+    DataType = string
+    <Default>
+     uom = meter
+    </Default>	
+    <Supported>
+     value = meter
+    </Supported>
+   </LiteralData>
+ </DataOutputs>  
