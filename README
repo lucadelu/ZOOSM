@@ -2,8 +2,8 @@ Copyright Luca Delucchi - 2010
 Authors: Luca Delucchi
 Email: lucadeluge_at_gmail_dot_com
 
-ZOOSM is a tool for ZOO-project WPS server (http://zoo-project.org/) 
-and PythonOsmApi to upload OGR vector data on OSM database
+ZOOSM is a tool for ZOO-project WPS server (http://zoo-project.org/).
+It use PythonOsmApi to upload OGR vector data on OSM database
 ZOOSM is designed to be used through a WebGIS client to allow 
 controlled imports
 
