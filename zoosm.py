@@ -51,7 +51,7 @@ def ZoOSM(conf,inputs,outputs):
     All parameters are passed from ZOO request
     """
     #the name of vector
-    inputName = conf["main"]["tmpPath"]+inputs["inputvector"]["value"]
+    inputName = inputs["inputvector"]["value"]
     #the username of openstreetmap
     usern = inputs["username"]["value"]
     #the password of user in openstreetmap
