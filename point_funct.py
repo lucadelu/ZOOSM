@@ -68,6 +68,7 @@ def loadPoint(layer,api):
     feature = layer.GetNextFeature()
     #first id for (after it will be sobstitute on osmdb
     iD=-1
+    n_feature = 0
     while feature:
 	#define the tags for the feature
 	tags = funct.tagDef(feature,fields)
@@ -83,7 +84,9 @@ def loadPoint(layer,api):
 	    nodeDef={unicode('id'):iD, unicode('lon'):geom.GetX(), 
 	    unicode('lat'):geom.GetY(),unicode('tag'):tags}
 	    api.NodeCreate(nodeDef)
+	    n_feature += 1
 	    iD=iD-1
 	feature=layer.GetNextFeature()
     #load data on OSM database
     api.flush()
+    return n_feature

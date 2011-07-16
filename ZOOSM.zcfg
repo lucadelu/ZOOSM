@@ -18,15 +18,24 @@
    Abstract = The input data source name.
    minOccurs = 1
    maxOccurs = 1
-   <LiteralData>
+   <ComplexData>
     DataType = string
     <Default>
-     uom = feet
-    </Default>	
+      mimeType = application/json
+      encoding = UTF-8
+    </Default>
     <Supported>
-     value = AAIGrid
+      mimeType = application/xml
+      encoding = UTF-8
+      schema = http://schemas.opengis.net/gml/3.1.1/feature.xsd
     </Supported>
-   </LiteralData>
+    <Supported>
+      mimeType = application/xml
+      encoding = UTF-8
+      schema = http://schemas.opengis.net/gml/2.1.2/feature.xsd
+    </Supported>	
+   </ComplexData>
+
   [username]
    Title = The OpenStreetMap's username
    Abstract = The username of OpenStreetMap project.
@@ -35,11 +44,7 @@
    <LiteralData>
     DataType = string
     <Default>
-     uom = meter
     </Default>	
-    <Supported>
-     uom = meter
-    </Supported>
    </LiteralData>
   [password]
    Title = The OpenStreetMap's password
@@ -49,11 +54,7 @@
    <LiteralData>
     DataType = string
     <Default>
-     uom = meter
     </Default>	
-    <Supported>
-     uom = meter
-    </Supported>
    </LiteralData>
  </DataInputs>
  <DataOutputs>
@@ -63,10 +64,6 @@
    <LiteralData>
     DataType = string
     <Default>
-     uom = meter
     </Default>	
-    <Supported>
-     value = meter
-    </Supported>
    </LiteralData>
  </DataOutputs>  

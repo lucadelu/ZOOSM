@@ -84,7 +84,10 @@ def ZoOSM(conf,inputs,outputs):
     #check the geometry type
     if inGeomType == 1:
 	# point data, load point on OSM DB
-	point.loadPoint(inLayer,osmapi)
+	npoint = point.loadPoint(inLayer,osmapi)
+        output = '%i features are imported' % npoint
+        outputs["output"]["value"]= output
+        return 3	
     elif inGeomType == 2 or inGeomType == 3:
 	# line/area data, load point on OSM DB
 	#line.loadLines(inLayer,osmapi)
